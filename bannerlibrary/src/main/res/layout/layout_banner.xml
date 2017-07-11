@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.tengxin.chelingwang.widget.banner.BannerViewPager
+        <com.tengxin.bannerlibrary.view.BannerViewPager
             android:id="@+id/mBannerViewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

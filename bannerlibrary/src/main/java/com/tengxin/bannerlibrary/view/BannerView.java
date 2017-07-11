@@ -12,12 +12,11 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.tengxin.bannerlibrary.adapter.BannerPageAdapter;
+import com.tengxin.bannerlibrary.holder.BannerHolderCreator;
 import com.tengxin.bannerlibrary.listener.BannerPageChangeListener;
 import com.tengxin.bannerlibrary.listener.OnItemClickListener;
 import com.tengxin.bannerlibrary.R;
 import com.tengxin.bannerlibrary.transformeranimo.ViewPagerScroller;
-import com.tengxin.chelingwang.R;
-import com.tengxin.chelingwang.widget.banner.holder.BannerHolderCreator;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
@@ -115,7 +114,6 @@ public class BannerView<T> extends LinearLayout {
         AdSwitchTask(BannerView mBannerView) {
             this.mReference = new WeakReference<BannerView>(mBannerView);
         }
-
 
         @Override
         public void run() {
@@ -245,6 +243,7 @@ public class BannerView<T> extends LinearLayout {
 
     /**
      * 指示器的方向
+     * 居中/靠左/靠右
      * @param mAlign
      * @return
      */
@@ -291,6 +290,11 @@ public class BannerView<T> extends LinearLayout {
 
     }
 
+    /**
+     * 设置Item的点击事件
+     * @param mOnItemClickListener
+     * @return
+     */
     public BannerView setOnItemClickListener(OnItemClickListener mOnItemClickListener) {
         if (null == mOnItemClickListener) {
             mViewPager.setOnItemClickListener(null);
