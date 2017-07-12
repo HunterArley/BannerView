@@ -26,5 +26,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:23.4.0'
     testCompile 'junit:junit:4.12'
-    compile project(path:':bannerlibrary')
+//    compile project(path:':bannerlibrary')
+    compile 'com.github.HunterArley:BannerView:v1.0.0'
 }
